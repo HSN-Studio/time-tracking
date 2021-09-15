@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import iconEllipsis from "../img/icon-ellipsis.svg";
 function ActivityCard() {
+  const [state, setstate] = useState("");
+  const getData = () => {
+    fetch("data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        !state &&
+          data.forEach((element) => {
+            setstate([...state, element]);
+          });
+      });
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div className="card-container">
       <div className="activity-icon">
@@ -8,13 +23,13 @@ function ActivityCard() {
       </div>
       <div className="activity-card">
         <div className="card-title">
-          <p>Work</p>
-          <div className="icon-ellipsis">
-            <i className=""></i>
-          </div>
+          <p className="activity-title">{state[0].title}</p>
+          <button className="icon-ellipsis" href="#">
+            <img src={iconEllipsis}></img>
+          </button>
         </div>
-        <h3>3hrs</h3>
-        <p>Last Week - 3hrs</p>
+        <h3 className="current">32hrs</h3>
+        <p className="last">Last Week - 3hrs</p>
       </div>
     </div>
   );

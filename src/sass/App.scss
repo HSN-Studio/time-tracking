@@ -25,7 +25,7 @@ $Pale-Blue: hsl(236, 100%, 87%);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  // gap: 1rem;
   background-color: $Very-dark-blue;
 }
 
@@ -83,15 +83,21 @@ li {
   color: $Desaturated-blue;
 }
 
+li:hover {
+  color: white;
+  cursor: pointer;
+}
 .right-col {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   width: 60%;
-  min-height: 70vh;
+  height: 70vh;
 }
 .card-container {
   height: 35vh;
-  padding: 0 0 0 1rem;
+  width: 20vw;
+  min-width: 15vw;
+  padding: 0 0 01rem 1rem;
 }
 
 .activity-icon {
@@ -107,20 +113,59 @@ li {
   background-color: $Dark-blue;
   border-radius: 0.5rem;
   position: relative;
-  top: -1rem;
+  top: -5vh;
   padding: 1rem;
+  height: 28vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-
+.activity-card:hover {
+  background-color: $Desaturated-blue;
+}
 .card-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.activity-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
 .icon-ellipsis {
-  background: url("../img/icon-ellipsis.svg") no-repeat;
-  display: inline-flex;
-  height: 1rem;
-  width: auto;
+  background: transparent;
+  border: none;
+}
+
+.icon-ellipsis:hover {
+  cursor: pointer;
+}
+
+.current {
+  font-size: 32px;
+}
+
+.last {
+  font-size: 12px;
+  color: $Pale-Blue;
+}
+
+/* Media Query for Devices below (768px = Tablet-Portrait)  */
+@media screen and (max-width: 767px) {
+  .App {
+    flex-direction: column;
+  }
+  .left-col {
+    // flex-direction: row;
+    width: 100%;
+    height: auto;
+  }
+
+  .user-info {
+    display: flex;
+  }
 }
 // ### Neutral
 
