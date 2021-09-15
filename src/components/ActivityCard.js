@@ -4,17 +4,12 @@ function ActivityCard() {
   const [state, setstate] = useState("");
   const getData = () => {
     fetch("data.json")
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => {
-        !state &&
-          data.forEach((element) => {
-            setstate([...state, element]);
-          });
+        console.log(data);
       });
   };
-  useEffect(() => {
-    getData();
-  }, []);
+  getData();
 
   return (
     <div className="card-container">
@@ -23,7 +18,7 @@ function ActivityCard() {
       </div>
       <div className="activity-card">
         <div className="card-title">
-          <p className="activity-title">{state[0].title}</p>
+          <p className="activity-title">work</p>
           <button className="icon-ellipsis" href="#">
             <img src={iconEllipsis}></img>
           </button>
