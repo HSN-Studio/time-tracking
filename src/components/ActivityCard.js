@@ -3,7 +3,7 @@ import iconEllipsis from "../img/icon-ellipsis.svg";
 function ActivityCard() {
   const [state, setstate] = useState("");
   const getData = () => {
-    fetch("data.json")
+    fetch("./data.json")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -1,6 +1,6 @@
 {
   "name": "time-tracking",
-  "homepage": "http://hsn-studio.github.io/time-tracking",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
