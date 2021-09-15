@@ -32,22 +32,24 @@ $Pale-Blue: hsl(236, 100%, 87%);
 .active {
   color: white;
 }
+
 .left-col {
   display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
   overflow: hidden;
-  min-height: 70vh;
+  height: 70vh;
   width: 20%;
   border-radius: 0.5rem;
   background-color: $Dark-blue;
 }
 
 .user-info {
-  min-height: 50vh;
+  height: 45vh;
   background-color: $primary;
   border-radius: 0.5rem;
   padding: 1em;
+  // display: none;
 }
 
 .user-info p {
@@ -57,20 +59,21 @@ $Pale-Blue: hsl(236, 100%, 87%);
 }
 
 .user-info h3 {
+  margin-bottom: 1rem;
   font-size: 3vw;
 }
 
 .user-info img {
-  width: 3rem;
+  max-width: 40%;
   height: auto;
   border: 2px solid hsl(0, 0, 100%);
   border-radius: 50%;
 }
 
 .duration-filter {
-  min-height: 20vh;
   padding: 0 1rem;
   color: $Desaturated-blue;
+  height: 20vh;
 }
 
 ul,
@@ -82,11 +85,43 @@ li {
 
 .right-col {
   display: inline-flex;
+  flex-wrap: wrap;
   width: 60%;
   min-height: 70vh;
-  background-color: $Dark-blue;
+}
+.card-container {
+  height: 35vh;
+  padding: 0 0 0 1rem;
 }
 
+.activity-icon {
+  height: 10vh;
+  border-radius: 0.5rem;
+  background: url("../img/icon-work.svg") no-repeat;
+  background-position: right;
+  background-color: $work;
+  display: block;
+}
+
+.activity-card {
+  background-color: $Dark-blue;
+  border-radius: 0.5rem;
+  position: relative;
+  top: -1rem;
+  padding: 1rem;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon-ellipsis {
+  background: url("../img/icon-ellipsis.svg") no-repeat;
+  display: inline-flex;
+  height: 1rem;
+  width: auto;
+}
 // ### Neutral
 
 // - Very dark blue: hsl(226, 43%, 10%)

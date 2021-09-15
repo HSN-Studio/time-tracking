@@ -12,6 +12,11 @@ function App() {
       </div>
       <div className="right-col">
         <ActivityCard />
+        <ActivityCard />
+        <ActivityCard />
+        <ActivityCard />
+        <ActivityCard />
+        <ActivityCard />
       </div>
     </div>
   );
