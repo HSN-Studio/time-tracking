@@ -5,6 +5,10 @@ $study: hsl(348, 100%, 68%);
 $exercise: hsl(145, 58%, 55%);
 $social: hsl(43, 84%, 65%);
 $selfcare: hsl(43, 84%, 65%);
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
 
 * {
   margin: 0;
@@ -12,6 +16,75 @@ $selfcare: hsl(43, 84%, 65%);
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
+  font-weight: 300;
+  color: hsl(0, 0, 100%);
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: $Very-dark-blue;
+}
+
+.active {
+  color: white;
+}
+.left-col {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  min-height: 70vh;
+  width: 20%;
+  border-radius: 0.5rem;
+  background-color: $Dark-blue;
+}
+
+.user-info {
+  min-height: 50vh;
+  background-color: $primary;
+  border-radius: 0.5rem;
+  padding: 1em;
+}
+
+.user-info p {
+  margin-top: 1rem;
+  font-size: 12px;
+  color: rgb(240, 240, 240);
+}
+
+.user-info h3 {
+  font-size: 3vw;
+}
+
+.user-info img {
+  width: 3rem;
+  height: auto;
+  border: 2px solid hsl(0, 0, 100%);
+  border-radius: 50%;
+}
+
+.duration-filter {
+  min-height: 20vh;
+  padding: 0 1rem;
+  color: $Desaturated-blue;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 1rem 0;
+  color: $Desaturated-blue;
+}
+
+.right-col {
+  display: inline-flex;
+  width: 60%;
+  min-height: 70vh;
+  background-color: $Dark-blue;
 }
 
 // ### Neutral

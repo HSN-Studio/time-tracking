@@ -6,10 +6,13 @@ import ActivityCard from "./components/ActivityCard";
 function App() {
   return (
     <div className="App">
-      <h1>Time Tracker</h1>
-      <UserInfo />
-      <ActivityFilter />
-      <ActivityCard />
+      <div className="left-col">
+        <UserInfo />
+        <ActivityFilter />
+      </div>
+      <div className="right-col">
+        <ActivityCard />
+      </div>
     </div>
   );
 }
