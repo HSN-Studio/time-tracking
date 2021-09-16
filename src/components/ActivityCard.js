@@ -1,31 +1,28 @@
 import React, { useEffect, useState } from "react";
-import iconEllipsis from "../img/icon-ellipsis.svg";
+import Act from "./Act";
 function ActivityCard() {
-  const [state, setstate] = useState("");
+  // State
+  const [state, setstate] = useState([]);
+
+  // Methods
   const getData = () => {
     fetch("./data.json")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        setstate([...state, ...data]);
       });
   };
-  getData();
 
+  const activitiesList=()=>state.map((activity) => {
+    return <Act activity={activity} />;
+  })
+  if (state.length === 0) getData();
+
+  // JSX AND render
   return (
     <div className="card-container">
-      <div className="activity-icon">
-        <span></span>
-      </div>
-      <div className="activity-card">
-        <div className="card-title">
-          <p className="activity-title">work</p>
-          <button className="icon-ellipsis" href="#">
-            <img src={iconEllipsis}></img>
-          </button>
-        </div>
-        <h3 className="current">32hrs</h3>
-        <p className="last">Last Week - 3hrs</p>
-      </div>
+      {state.length > 0 && activitiesList()
+        }
     </div>
   );
 }
