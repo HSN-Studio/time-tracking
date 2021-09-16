@@ -21,14 +21,6 @@ function App() {
       </div>
       <div className="right-col">
         <ActivityCard />
-        {/* {state.length > 0 &&
-          state.map((activity, i) => {
-          })}
-        {/* <ActivityCard />
-        <ActivityCard />
-        <ActivityCard />
-        <ActivityCard />
-        <ActivityCard /> */}
       </div>
     </div>
   );

@@ -13,17 +13,15 @@ function ActivityCard() {
       });
   };
 
-  const activitiesList=()=>state.map((activity) => {
-    return <Act activity={activity} />;
-  })
+  const activitiesList = () =>
+    state.map((activity) => {
+      return <Act activity={activity} />;
+    });
   if (state.length === 0) getData();
 
   // JSX AND render
   return (
-    <div className="card-container">
-      {state.length > 0 && activitiesList()
-        }
-    </div>
+    <div className="card-container">{state.length > 0 && activitiesList()}</div>
   );
 }
 

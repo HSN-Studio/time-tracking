@@ -3,7 +3,7 @@ $work: hsl(15, 100%, 70%);
 $play: hsl(195, 74%, 62%);
 $study: hsl(348, 100%, 68%);
 $exercise: hsl(145, 58%, 55%);
-$social: hsl(43, 84%, 65%);
+$social: hsl(264, 64%, 52%);
 $selfcare: hsl(43, 84%, 65%);
 $Very-dark-blue: hsl(226, 43%, 10%);
 $Dark-blue: hsl(235, 46%, 20%);
@@ -103,12 +103,42 @@ li:hover {
 .activity-icon {
   height: 10vh;
   border-radius: 0.5rem;
-  background: url("../img/icon-work.svg") no-repeat;
-  background-position: right;
-  background-color: $work;
   display: block;
 }
 
+.Work {
+  background: url("../img/icon-work.svg") no-repeat;
+  background-position: right;
+  background-color: $work;
+}
+
+.Play {
+  background: url("../img/icon-play.svg") no-repeat;
+  background-position: right;
+  background-color: $play;
+}
+.Study {
+  background: url("../img/icon-study.svg") no-repeat;
+  background-position: right;
+  background-color: $study;
+}
+.Exercise {
+  background: url("../img/icon-exercise.svg") no-repeat;
+  background-position: right;
+  background-color: $exercise;
+}
+
+.Social {
+  background: url("../img/icon-social.svg") no-repeat;
+  background-position: right;
+  background-color: $social;
+}
+
+.SelfCare {
+  background: url("../img/icon-self-care.svg") no-repeat;
+  background-position: right;
+  background-color: $selfcare;
+}
 .activity-card {
   background-color: $Dark-blue;
   border-radius: 0.5rem;
