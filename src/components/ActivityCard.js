@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import iconEllipsis from "../img/icon-ellipsis.svg";
+import ActivityFilter from "./ActivityFilter";
 
-function ActivityCard() {
+function ActivityCard({ time }) {
   // State
 
   const [state, setstate] = useState([]);
-  const [timeFrame, settimeFrame] = useState(`weekly`);
+  const timeFrame = time;
 
   // Methods
   const getData = () => {

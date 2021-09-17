@@ -1,12 +1,10 @@
 import "./sass/App.scss";
 import UserInfo from "./components/UserInfo";
 import ActivityFilter from "./components/ActivityFilter";
-import ActivityCard from "./components/ActivityCard";
-import { useState, useLayoutEffect } from "react";
+import { useState } from "react";
 
 function App() {
   // States
-
   // Regular Methods
 
   // Hooks
@@ -18,9 +16,6 @@ function App() {
       <div className="left-col">
         <UserInfo />
         <ActivityFilter />
-      </div>
-      <div className="right-col">
-        <ActivityCard />
       </div>
     </div>
   );
