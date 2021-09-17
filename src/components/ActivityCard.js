@@ -5,6 +5,7 @@ function ActivityCard() {
   // State
 
   const [state, setstate] = useState([]);
+  const [timeFrame, settimeFrame] = useState(`weekly`);
 
   // Methods
   const getData = () => {
@@ -19,7 +20,19 @@ function ActivityCard() {
   const activitiesList = () =>
     state.map((activity) => {
       const { title } = activity;
-      const { current, previous } = activity.timeframes.daily;
+      let current, previous;
+      if (timeFrame === `daily`) {
+        current = activity.timeframes.daily.current;
+        previous = activity.timeframes.daily.previous;
+      }
+      if (timeFrame === `weekly`) {
+        current = activity.timeframes.weekly.current;
+        previous = activity.timeframes.weekly.previous;
+      }
+      if (timeFrame === `monthly`) {
+        current = activity.timeframes.monthly.current;
+        previous = activity.timeframes.monthly.previous;
+      }
       return (
         <div className="card-container">
           <div className={`activity-icon ${title.replace(/\s+/g, "")}`}>
