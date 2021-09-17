@@ -37,7 +37,7 @@ $Pale-Blue: hsl(236, 100%, 87%);
   display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
-  overflow: hidden;
+  // overflow: hidden;
   height: 70vh;
   width: 20%;
   border-radius: 0.5rem;
@@ -45,7 +45,7 @@ $Pale-Blue: hsl(236, 100%, 87%);
 }
 
 .user-info {
-  height: 45vh;
+  max-height: 45vh;
   background-color: $primary;
   border-radius: 0.5rem;
   padding: 1em;
@@ -54,7 +54,7 @@ $Pale-Blue: hsl(236, 100%, 87%);
 
 .user-info p {
   margin-top: 1rem;
-  font-size: 12px;
+  font-size: 8px;
   color: rgb(240, 240, 240);
 }
 
@@ -95,7 +95,7 @@ li:hover {
 }
 .card-container {
   height: 35vh;
-  width: 20vw;
+  width: auto;
   min-width: 15vw;
   padding: 0 0 01rem 1rem;
 }
@@ -182,19 +182,57 @@ li:hover {
   color: $Pale-Blue;
 }
 
-/* Media Query for Devices below (768px = Tablet-Portrait)  */
-@media screen and (max-width: 767px) {
+/* Media Query for Mobile Devices below   */
+@media screen and (max-width: 375px) {
   .App {
     flex-direction: column;
   }
-  .left-col {
-    // flex-direction: row;
+  .left-col,
+  .right-col {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+    margin: 1rem 0 0.5rem 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-container {
     width: 100%;
     height: auto;
+    padding: 0;
   }
 
   .user-info {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .user-info img {
+    width: 20vw;
+    height: auto;
+    margin: 1rem;
+  }
+  .report-title p {
+    margin: 0.5rem 0;
+    font-size: 12px;
+  }
+
+  .duration-filter {
+    height: auto;
+    display: flex;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 0 1rem;
   }
 }
 // ### Neutral

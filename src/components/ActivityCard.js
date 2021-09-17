@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Act from "./Act";
+import iconEllipsis from "../img/icon-ellipsis.svg";
+
 function ActivityCard() {
   // State
+
   const [state, setstate] = useState([]);
 
   // Methods
@@ -12,17 +14,33 @@ function ActivityCard() {
         setstate([...state, ...data]);
       });
   };
+  if (state.length === 0) getData();
 
   const activitiesList = () =>
     state.map((activity) => {
-      return <Act activity={activity} />;
+      const { title } = activity;
+      const { current, previous } = activity.timeframes.daily;
+      return (
+        <div className="card-container">
+          <div className={`activity-icon ${title.replace(/\s+/g, "")}`}>
+            <span></span>
+          </div>
+          <div className="activity-card">
+            <div className="card-title">
+              <p className="activity-title">{title}</p>
+              <button className="icon-ellipsis" href="#">
+                <img src={iconEllipsis}></img>
+              </button>
+            </div>
+            <h3 className="current">{current}hrs</h3>
+            <p className="last">Last Week - {previous}hrs</p>
+          </div>
+        </div>
+      );
     });
-  if (state.length === 0) getData();
 
   // JSX AND render
-  return (
-    <div className="card-container">{state.length > 0 && activitiesList()}</div>
-  );
+  return <>{state.length > 0 && activitiesList()}</>;
 }
 
 export default ActivityCard;
