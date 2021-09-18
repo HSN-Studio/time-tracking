@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/time-tracking/static/css/main.b74ac5ef.chunk.css",
-    "main.js": "/time-tracking/static/js/main.45ce7daf.chunk.js",
-    "main.js.map": "/time-tracking/static/js/main.45ce7daf.chunk.js.map",
+    "main.css": "/time-tracking/static/css/main.c00870ea.chunk.css",
+    "main.js": "/time-tracking/static/js/main.50d20983.chunk.js",
+    "main.js.map": "/time-tracking/static/js/main.50d20983.chunk.js.map",
     "runtime-main.js": "/time-tracking/static/js/runtime-main.c56ad5ca.js",
     "runtime-main.js.map": "/time-tracking/static/js/runtime-main.c56ad5ca.js.map",
     "static/js/2.36102a29.chunk.js": "/time-tracking/static/js/2.36102a29.chunk.js",
     "static/js/2.36102a29.chunk.js.map": "/time-tracking/static/js/2.36102a29.chunk.js.map",
     "index.html": "/time-tracking/index.html",
-    "static/css/main.b74ac5ef.chunk.css.map": "/time-tracking/static/css/main.b74ac5ef.chunk.css.map",
+    "static/css/main.c00870ea.chunk.css.map": "/time-tracking/static/css/main.c00870ea.chunk.css.map",
     "static/js/2.36102a29.chunk.js.LICENSE.txt": "/time-tracking/static/js/2.36102a29.chunk.js.LICENSE.txt",
     "static/media/icon-ellipsis.a57a4ac8.svg": "/time-tracking/static/media/icon-ellipsis.a57a4ac8.svg",
     "static/media/App.scss": "/time-tracking/static/media/icon-work.a3f124e5.svg",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.c56ad5ca.js",
     "static/js/2.36102a29.chunk.js",
-    "static/css/main.b74ac5ef.chunk.css",
-    "static/js/main.45ce7daf.chunk.js"
+    "static/css/main.c00870ea.chunk.css",
+    "static/js/main.50d20983.chunk.js"
   ]
 }
