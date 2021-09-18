@@ -1,2 +1,0 @@
-(this["webpackJsonptime-tracking"]=this["webpackJsonptime-tracking"]||[]).push([[0],{11:function(t,n,e){"use strict";e.r(n);var c=e(1),i=e.n(c),r=e(3),s=e.n(r),a=(e(8),e(9),e(0));var o=function(){return Object(a.jsx)("div",{className:"App"})};s.a.render(Object(a.jsx)(i.a.StrictMode,{children:Object(a.jsx)(o,{})}),document.getElementById("root"))},8:function(t,n,e){},9:function(t,n,e){}},[[11,1,2]]]);
-//# sourceMappingURL=main.65d9c089.chunk.js.map
